@@ -1,0 +1,25 @@
+package br.ufc.art_gallery.modelo;
+
+public class PinturaDigital extends Obra {
+	
+	private String resolucao;
+	private String softwareUtilizado;
+	
+	public PinturaDigital (String titulo, String autor, String resolucao, String softwareUtilizado) {
+		super(titulo, autor);
+		this.resolucao = resolucao;
+		this.softwareUtilizado = softwareUtilizado;
+	}
+	
+	public String getResolucao() { return resolucao;}
+	public String getSoftware() { return softwareUtilizado;}
+	
+	@Override
+	public String exibirDetalhes() {
+		return "Titulo: " + getTitulo() + 
+				"\nAutor: " + getAutor() + 
+				"\nTipo: Pintura Digital" + 
+				"\nResolução: " + getResolucao() + 
+				"\nSoftware: " + getSoftware();
+	}
+}
